@@ -1,0 +1,799 @@
+/* Updated CSS for tabs and notifications */
+.css-tabcontent {
+  z-index: 3;
+  margin-left: 910px;
+  position: absolute;
+  display: none;
+  padding: 100px 50px;
+  width: 395px;
+  border: 4px solid #ccc;
+  border-top: none;
+}
+
+
+
+.tab {
+  position: relative;
+  z-index: 3;
+  max-height: 200px;
+  width: 785px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #252528;
+  overflow: hidden; /* Hide overflow initially */
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: max-height 0.3s ease;
+}
+
+.tab:hover {
+  overflow: auto; /* Enable scrolling on hover */
+}
+
+.tab::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.tab::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 3px;
+}
+
+.tab::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.tab::-webkit-scrollbar-track {
+  background: #252528;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-content {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+
+.right-content {
+  width: 80px;
+  margin-left: 10px;
+}
+
+.tabDescription {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.tab-image {
+  border-radius: 18%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.tab-picture {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Button styles */
+.buttons-container {
+  margin-left: 70px;
+  width: calc(100% - 70px);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.buttons-container > div {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.long-button, .short-button {
+  background: transparent;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s, opacity 0.2s;
+  font-size: 12px;
+  padding: 3px 8px;
+  margin: 0 5px 0 0;
+  min-width: 50px;
+}
+
+.long-button {
+  border: 1px solid #4CAF50;
+}
+
+.short-button {
+  border: 1px solid #f44336;
+}
+
+.long-button:hover {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+.short-button:hover {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+/* Notification style */
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  opacity: 0.9;
+  z-index: 1000;
+  max-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Neon effects */
+.neon-blue {
+  box-shadow: 0 0 5px #0088ff, inset 0 0 5px #0088ff;
+  border: 1px solid #0088ff !important;
+}
+
+.neon-orange {
+  box-shadow: 0 0 5px #ff8800, inset 0 0 5px #ff8800;
+  border: 1px solid #ff8800 !important;
+}
+
+.neon-purple {
+  box-shadow: 0 0 5px #cc00ff, inset 0 0 5px #cc00ff;
+  border: 1px solid #cc00ff !important;
+}
+
+.neon-red {
+  box-shadow: 0 0 5px #ff0033, inset 0 0 5px #ff0033;
+  border: 1px solid #ff0033 !important;
+}
+
+/* Make sure the text is visible */
+#texttttt {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+/* Neon effects */
+.neon-blue {
+  box-shadow: 0 0 5px #0088ff, inset 0 0 5px #0088ff;
+  border: 1px solid #0088ff !important;
+}
+
+.neon-orange {
+  box-shadow: 0 0 5px #ff8800, inset 0 0 5px #ff8800;
+  border: 1px solid #ff8800 !important;
+}
+
+.neon-purple {
+  box-shadow: 0 0 5px #cc00ff, inset 0 0 5px #cc00ff;
+  border: 1px solid #cc00ff !important;
+}
+
+.neon-red {
+  box-shadow: 0 0 5px #ff0033, inset 0 0 5px #ff0033;
+  border: 1px solid #ff0033 !important;
+}
+
+/* Make sure the text is visible */
+#texttttt {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+  .tab.neon-blue {
+    border: 2px solid #0000ff; /* Blue border color */
+    box-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tab.neon-orange {
+    border: 2px solid #ffa500; /* Orange border color */
+    box-shadow: 0 0 10px #ffa500, 0 0 20px #ffa500, 0 0 30px #ffa500;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tab.neon-purple {
+    border: 2px solid #800080; /* Purple border color */
+    box-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tab.neon-red {
+    border: 2px solid #ff0000; /* Red border color */
+    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Rainbow Spinning Effect */
+@keyframes rainbowSpin {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+.tab.rainbow-spin {
+    animation: rainbowSpin 5s linear infinite;
+    box-shadow: 0 0 20px red, 0 0 20px orange, 0 0 20px yellow, 0 0 20px green, 0 0 20px blue, 0 0 20px indigo, 0 0 20px violet;
+}
+
+    .notification {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #28a745;  /* Green for success */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      display: none;  /* Hide by default */
+      z-index: 1000;  /* Ensure it appears on top of other elements */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif; /* Removed Ubuntu, using system default */
+}
+
+:root
+{
+    --green: #0a1a47;
+    --white: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --epic_green: #382d9c;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+
+/* Container for the positions box */
+.positions-container {
+  position: relative;
+  width: 35%;
+  z-index: 2;
+}
+
+/* Styling for the positions box */
+.positions-container {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Styling for the positions box */
+
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+.tab-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.tab-item:hover {
+  background-color: #2a2a2a;
+}
+
+/* Toggle symbols */
+.toggle-symbols {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.checkbox {
+  margin-right: 5px;
+}
+
+/* Icon style */
+.fas.fa-ellipsis-h {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.column-header {
+  padding: 10px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+.position-row {
+  color: #fff;
+}
+
+.position-row td {
+  padding: 6px; /* Reduced padding to make table rows more compact */
+  vertical-align: middle;
+}
+
+/* Position Cells Styling */
+.symbol-cell {
+  display: flex;
+  gap: 6px; /* Reduced gap between symbol and type */
+  align-items: center;
+}
+
+.symbol {
+  color: #00ff00;
+}
+
+.type,
+.leverage {
+  background-color: #333;
+  color: #ccc;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.size-cell,
+.entry-price-cell,
+.break-even-price-cell,
+.mark-price-cell,
+.liq-price-cell,
+.margin-ratio-cell,
+.margin-cell,
+.pnl-cell {
+  color: #ccc;
+}
+
+.liq-price-cell {
+  color: #ff4c4c;
+}
+
+.pnl-cell {
+  color: #00ff00;
+}
+
+.close-position-cell {
+  color: #f9c74f;
+}
+
+.reverse-cell {
+  display: flex;
+  gap: 6px; /* Reduced gap between input elements */
+}
+
+.reverse-price,
+.reverse-amount {
+  background-color: #333;
+  color: #ccc;
+  border: 1px solid #444;
+  padding: 3px;
+  border-radius: 4px;
+  width: 80px; /* Reduced width for a more compact layout */
+  font-size: 12px; /* Smaller text size for inputs */
+}
+
+.reverse-btn {
+  background-color: #444;
+  color: #fff;
+  padding: 3px 8px; /* Reduced padding for buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px; /* Smaller text size for buttons */
+}
+
+.tp-sl-cell,
+.add-tp-sl-cell {
+  color: #ccc;
+}
+
+.add-tp-btn {
+  background-color: #444;
+  color: #fff;
+  padding: 3px 8px; /* Reduced padding for buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px; /* Smaller text size for buttons */
+}
+/* Toggle Symbol Visibility */
+.toggle-symbols {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+/* Navigation Styles */
+.navigation {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background: #191a1c;
+  border-left: 10px #191a1c;
+  transition: width 0.5s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.navigation.active {
+  width: 300px;
+  z-index: 2;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 2;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 200%;
+  list-style: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  z-index: 2;
+}
+
+.navigation ul li:hover {
+  background: var(--epic_green);
+  z-index: 2;
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+  z-index: 2;
+}
+
+.navigation ul li:hover a {
+  color: var(--green);
+  z-index: 2;
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 90px;
+  line-height: 60px;
+  text-align: center;
+  z-index: 2;
+}
+
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75em;
+  z-index: 2;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.navigation ul li:hover a::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Button and Notification Styles */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#button1, #button2, #button3, #button4, #button5, #button6 {
+  width: 50px;
+  height: 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 5px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+/* Green buttons - all in first row */
+#button1, #button3, #button5 {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #1c9b6e;
+  display: inline-block;
+}
+
+#button1:hover, #button3:hover, #button5:hover {
+  box-shadow: 0 0 5px #1c9b6e, 0 0 10px rgba(28, 155, 110, 0.4);
+  border-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Red buttons - all in second row */
+#button2, #button4, #button6 {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #cf0c0c;
+  display: inline-block;
+}
+
+#button2:hover, #button4:hover, #button6:hover {
+  box-shadow: 0 0 5px #cf0c0c, 0 0 10px rgba(207, 12, 12, 0.4);
+  border-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+#texttttt {
+  position: absolute;
+  top: 3px;
+  right: -99px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* Create two separate rows for buttons */
+.buttons-container {
+  margin-top: 5px;
+}
+
+/* First row - green buttons */
+.buttons-container > div:first-child {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+/* Second row - red buttons */
+.buttons-container > div:last-child {
+  display: flex;
+}
+
+
+
+  
+  #tooltip {
+
+    position: absolute;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    display: none;
+
+    pointer-events: none; /* Prevent mouse events on the tooltip */
+
+}
+
+
+  td {
+  padding: 2px 10px; /* Adds space around text */
+  line-height: 1.6;   /* Adjusts the height between lines of text */
+}
+
+/* Style the Market button */
+.market-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.market-btn:hover {
+  background-color: #00ff0d;
+}
+
+/* Style for the Reverse button */
+.reverse-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reverse-btn:hover {
+  background-color: #e53935;
+}
+
+/* Optionally, add some space between the buttons and input fields */
+.reverse-cell input {
+  margin-right: 8px;
+}
+
+/* Style for the column headers */
+th.column-header {
+  padding: 2px 15px;
+  background-color: #242222;
+  font-weight: bold;
+}
+
+/* Positive/Negative profit styles */
+.pnl-cell.profit-positive {
+  color: rgb(0, 255, 0);
+}
+
+.pnl-cell.profit-negative {
+  color: red;
+}
+
+.symbol.long {
+  color: rgb(0, 255, 0);
+}
+
+/* Short position - red */
+.symbol.short {
+  color: red;
+}
+
+/* Positive PNL - green */
+.symbol.clickable {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.symbol.clickable:hover {
+  opacity: 0.8;
+}
+
+.button {
+  width: 81px;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  background: linear-gradient(145deg, #252c2f, #1c2022);
+  color: #b0fcff;
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+    3px 3px 6px rgba(0, 0, 0, 0.3),
+    -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.button.green {
+  --btn-highlight: #1c9b6e;
+  border: 2px solid var(--btn-highlight);
+  background: linear-gradient(145deg, #1a2922, #21362f);
+}
+
+.button.red {
+  --btn-highlight: #cf0c0c;
+  border: 2px solid var(--btn-highlight);
+  background: linear-gradient(145deg, #2c1a1a, #3a2121);
+}
+
+/* Hover Effects */
+.button.green:hover {
+  background: linear-gradient(145deg, #1fbe80, #14a767);
+  color: #e0ffe6;
+  box-shadow: 
+    4px 4px 8px rgba(28, 155, 110, 0.4),
+    -4px -4px 8px rgba(28, 155, 110, 0.15);
+  transform: translateY(-2px);
+}
+
+.button.red:hover {
+  background: linear-gradient(145deg, #e03d3d, #b82020);
+  color: #ffe0e0;
+  box-shadow: 
+    4px 4px 8px rgba(207, 12, 12, 0.4),
+    -4px -4px 8px rgba(207, 12, 12, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Click Animation */
+.button:active {
+  animation: clickEffect 0.2s ease-in-out;
+  transform: scale(0.95);
+  box-shadow: 
+    inset 2px 2px 4px rgba(0, 0, 0, 0.5),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Keyframes for the click animation */
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
